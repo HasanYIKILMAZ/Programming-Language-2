@@ -1,0 +1,107 @@
+Q1
+----
+void fun(int n, int a, int b)		OUTPUT
+{				------------------
+if (n >= 10)				8 5 19
+ return;				6 5 13 
+fun(n + 2, a, b + n);			4 5 9	
+printf("%d %d %d\n", n, a, b);		2 5 7
+}					0 5 7
+Q2
+----
+
+Q3
+----
+#include <stdio.h>
+int fun(int n)
+{					                        OUTPUT
+ if (n == 4)		           	-------------------
+ return n;				                  16
+ else return 2*fun(n+1);
+}
+ int main()
+{
+ printf("%d ", fun(2));
+ return 0;
+}
+
+Q4
+----
+int toplam(int n){			                OUTPUT
+if (n == 1)			                  -------------------
+return n;				                        Sonuc=21
+else
+return (n + toplam(n - 1));
+}
+void main(void){
+int sayi = 6;
+printf("Sonuc = %d", toplam(sayi));
+}
+
+Q5
+----
+In recursion, the condition for which the function will stop calling itself is ____________
+Özyinelemede, işlevin kendini çağırmayı durduracağı koşul ____________ ile ifade edilir.
+
+c) Base case (Temel durum)
+
+Q6
+----
+void my_recursive_function(int n){
+ if(n == 0)			                              	OUTPUT
+ return;		                          	--------------------
+ printf("%d ",n);		                         7 6 5 4 3 2 1
+ my_recursive_function(n-1);
+}
+void main(){
+ my_recursive_function(7);
+}
+
+Q7
+----
+(for n=25)
+void fun(int n){			            OUTPUT
+ if (n == 0)			          --------------------
+ return;			            	      11001
+ fun(n/2);
+ printf("%d", n%2);
+
+. You have to find the sum of digits of a number given that the number is always greater than 0. Which
+of the following base cases can replace the base case for the below code?
+Sayının her zaman 0'dan büyük olduğu durumlar için bir sayının rakamlarının toplamını bulmak
+istiyoruz. Aşağıdaki temel durumlardan hangisi kod içindeki temel durum ile değiştirilmelidir?
+int recursive_sum_of_digits(int n){
+ if(n == 0)
+ return 0;
+ return n % 10 + recursive_sum_of_digits(n/10);
+}
+void main(){
+ int n = 1201;				                            	Ans:E-None of them
+ int ans = recursive_sum_of_digits(n);
+ printf("%d",ans);
+}
+
+Q9
+----
+. If the following code is executed, how many "a" will be written on the screen.
+Aşağıdaki verilen kod çalıştırılırsa ekran kaç adet ”a” yazar.
+#include<stdio.h>
+char f1(int b);
+main()
+{
+ char a;
+ a=f1(10);
+ printf("%c",a);
+}				                  	OUTPUT
+char f1(int b)			    ---------------------
+{			                  	infinitive a
+                        Ans: E. Sınırsız sayıda(Infinitive number)
+printf("a");			
+ if(b<=8)
+ return 'a';
+ else
+ {
+ printf("a");
+ f1(b--);
+ }
+}

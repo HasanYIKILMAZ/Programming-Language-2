@@ -1,0 +1,236 @@
+Q1
+#include <stdio.h>
+
+enum day {sunday=1,tuesday,wednesday,thursday,friday,saturday};
+
+int main()
+{
+	enum day d = thursday;
+	printf("The day number stored in d is %d",d);
+	return 0;
+}
+ANS 1
+OUTPUT= The day number stored in d is 4
+
+Q2
+#include <stdio.h>
+
+enum State {WORKING = 0, FAILED,FREEZED};
+enum State currState = 2;
+
+enum State FindState() {
+	return currState;
+}
+
+int main(){
+(FindState() == WORKING)? printf("WORKING"): printf("NOT WORKING");
+return 0;	 
+}
+ANS 2
+OUTPUT= NOT WORKING
+
+Q3
+#include<stdio.h>
+
+main()
+{
+	enum result { pass,fail};
+	enum result s1,s2;
+	s1=pass;
+	s2=fail;
+	printf("%d",s1);
+}
+ANS 3
+OUTPUT= 0
+
+Q4
+#include <stdio.h>
+
+enum example {a=1,b,c};
+enum example example1 = 2;
+enum example answer()
+{
+	return example1;
+}
+
+int main()
+{
+	(answer()==a)? printf("yes"): printf("no");
+	return 0;
+}
+
+ANS 4
+OUTPUT = no
+
+Q5
+#include <stdio.h>
+#define MAX 4
+
+enum sanfoundry
+{
+	a,b=3,c
+};
+
+main()
+{
+	if(MAX!= c)
+		printf("hello");
+	else
+		printf("welcome");
+}
+ANS 5
+OUTPUT= welcome
+
+Q6
+#include<stdio.h>
+
+enum sanfoundry
+{
+	a,b,c
+};
+enum sanfoundry g;
+
+main()
+{
+	g++;
+	printf("%d",g);
+}
+ANS 6
+It's still working.
+OUTPUT= 1
+
+Q7
+#include <stdio.h>
+
+enum day
+{
+	a,b,c=5,d,e
+};
+
+main()
+{
+	printf("Enter the value for a ");
+	scanf("%d",a);
+	
+	printf("%d",a);
+}
+ANS 7
+OUTPUT= 0
+
+Q8
+#include <stdio.h>
+
+enum sanfoundry
+{
+	c=0,
+	d=10,
+	h=20,
+	s=3
+}a;
+
+int main()
+{
+	a=c;
+	printf("Size of enum variables = %d bytes",sizeof(a));
+	return 0;
+}
+ANS 8
+OUTPUT= Size of enum variables = 4 bytes
+
+Q9
+#include<stdio.h>
+
+enum sanfoundry
+{
+	a=1,b,c,d,e
+};
+
+int main()
+{
+	printf("%d",b*c+e-d);	
+}
+ANS 9
+OUTPUT= 7
+
+Q10
+#include<stdio.h>
+
+enum sanfoundry{
+	a,b,c=5
+};
+
+int main()
+{
+	enum sanfoundry s;
+	
+	b=10;
+	printf("%d",b);
+}
+ANS 10
+OUTPUT= 1
+
+Q11
+#include<stdio.h>
+enum sanfoundry
+{
+	a=1,b
+};
+
+enum sanfoundry1
+{
+	c,d
+};
+
+int main()
+{
+	enum sanfoundry1 s1=c;
+	enum sanfoundry s=a;
+	enum sanfoundry s2=d;
+	
+	printf("%d",s);
+	printf("%d",s1);
+	printf("%d",s2);
+}
+ANS 11
+OUTPUT= 101
+
+Q11.2
+OUTPUT
+C Programming Nuha Ali C Programming Tutorial 6495407
+Telecom Billing Zara Ali Telecom Billing Tutorial 6495700
+
+Q12
+OUTPUT
+Book title: C Programming 
+Book author: Nuha Ali 
+Book subject: C Programming Tutorial 
+Book book_id: 6495407
+Book title: Telecom Billing 
+Book author: Zara Ali 
+Book subject: Telecom Billing Tutorial
+Book book_id: 6495700
+
+Q13
+OUTPUT
+Displaying Information
+Name:....... Age: ........ (it repeats n times, n is total of persons)
+
+Q17
+OUTPUT
+DHONİ KOHLİ
+
+Q18
+OUTPUT
+Name:........
+Age:.....
+
+Q19
+Displaying Information
+Name:........
+Roll:......(it's age)
+
+Q20
+OUTPUT
+
+result.real= ****.*
+result.img= ****.*
